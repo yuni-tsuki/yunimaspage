@@ -6,6 +6,7 @@ html {
 body {
     line-height: 1.7;
     font-size: 1.6rem;
+    width: 100vw
 }
 img {
     max-width: 100%;
@@ -16,18 +17,36 @@ header{
 }
 .bgimage{
     background-image: url(teatime.jpg);
-    min-width: 100%;
+    min-width: 100vw;
     min-height: 56vw;
     background-position: top left 50%;
+}@media screen and (min-width:700px){
+.bgimage{
+    height: 100vh; /* 全画面表示 */ 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 }
 .topcontent{
     color: white;
     text-align: center;
-    margin: 15vw auto auto auto;
+    margin: 10vw auto auto auto;
+}@media screen and (min-width:700px){
+.topcontent{
+    color: white;
+    text-align: center;
+    margin: 30vh auto auto auto;
+}
 }
 .topcontent h2{
-    font-size: 500%;
+    font-size: 4rem;
     font-family: 'Caveat', cursive;
+}@media screen and (min-width:600px){
+.topcontent h2{
+    font-size: 8rem;
+    font-family: 'Caveat', cursive;
+}
 }
 .profile {
     text-align: center;
@@ -36,13 +55,17 @@ header{
 .profile h2 {
     font-size: 2.5rem;
     padding: 20px 0;
-}
+}@media screen and (min-width:600px){
+.profile h2{
+    font-size: 5rem;
+}}
+@media screen and (min-width:700px){
 .maincontents {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10%;
-}
+}}
 .maincontents a {
     color: brown;
 }
@@ -74,3 +97,10 @@ footer {
     color: white;
     background-image: url(teatime_footer.jpg);
 }
+/*@media screen and (max-width:600px) {
+p {
+    font-size: 2rem;
+}
+ul {
+    font-size: 2rem;
+}   }*/
