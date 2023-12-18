@@ -16,7 +16,7 @@ header{
     font-family: 'Caveat', cursive;
 }
 .bgimage{
-    background-image: url(teatime.jpg);
+    background-image: url(images/teatime.jpg);
     min-width: 100vw;
     min-height: 56vw;
     background-position: top left 50%;
@@ -91,5 +91,5 @@ header{
 }
 footer {
     color: white;
-    background-image: url(teatime_footer.jpg);
+    background-image: url(images/teatime_footer.jpg);
 }
