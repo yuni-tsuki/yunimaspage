@@ -1,0 +1,106 @@
+@charset "UTF-8";
+$pc_width: 768px;
+@mixin pc {
+    @media screen and (min-width:$pc_width){
+        @content;
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    line-height: 1.7;
+    font-size: 1.6rem;
+    width: 100%
+}
+img {
+    max-width: 100%;
+}
+header {
+    font-size: 0.5em;
+    color: white;
+    font-family: 'Caveat', cursive;
+    @media screen and (min-width:$pc_width) {
+        font-size: 1em;
+    }
+}
+.bg-img {
+    background-image: url(images/teatime.jpg);
+    min-width: 100vw;
+    height: 57vw;
+    background-position: top left 50%;
+    background-size: cover;
+    @media screen and (min-width:$pc_width){
+        height: 100vh; /* 全画面表示 */ 
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+.top-container {
+    color: white;
+    text-align: center;
+    margin: 10vw auto auto auto;
+    h1 {
+        font-size: 5rem;
+        font-family: 'Caveat', cursive;
+    }
+    @include pc{
+        color: white;
+        text-align: center;
+        margin: 30vh auto auto auto;
+        font-size: 2.5rem;
+    }
+}
+.profile {
+    text-align: center;
+    margin: 80px 0;
+    h1 {
+        font-size: 2.5rem;
+        padding: 20px 0;
+        @include pc {
+            font-size: 5rem;
+        }
+    }
+}
+
+
+.main-container {
+    width: 100%;
+    @include pc {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10%;
+    }
+    a {
+        color: brown;
+        &:hover {
+            color: rgb(198, 149, 130)
+        }
+    }
+}
+.link {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 150px auto;
+    grid-template-rows: 150px auto;
+    p {
+        margin: 50px 0;
+    }
+    img {
+        width: 150px;
+        height: auto;
+    }
+    #vertical-center-img {
+        display: flex;
+        align-items: center;
+    }
+}
+footer {
+    color: white;
+    background-image: url(images/teatime_footer.jpg);
+    small {
+        margin-left: 10%;
+    }
+}
