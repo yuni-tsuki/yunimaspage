@@ -1,95 +1,116 @@
 @charset "UTF-8";
-
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
+
 body {
-    line-height: 1.7;
-    font-size: 1.6rem;
-    width: 100vw
+  line-height: 1.7;
+  font-size: 1.6rem;
+  width: 100%;
 }
+
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
-header{
-    color: white;
-    font-family: 'Caveat', cursive;
+
+header {
+  font-size: 0.5em;
+  color: white;
+  font-family: "Caveat", cursive;
 }
-.bgimage{
-    background-image: url(images/teatime.jpg);
-    min-width: 100vw;
-    min-height: 56vw;
-    background-position: top left 50%;
-}@media screen and (min-width:700px){
-.bgimage{
-    height: 100vh; /* 全画面表示 */ 
+@media screen and (min-width: 768px) {
+  header {
+    font-size: 1em;
+  }
+}
+
+.bg-img {
+  background-image: url(images/teatime.jpg);
+  min-width: 100vw;
+  height: 57vw;
+  background-position: top left 50%;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .bg-img {
+    height: 100vh; /* 全画面表示 */
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center center;
+  }
 }
+
+.top-container {
+  color: white;
+  text-align: center;
+  margin: 10vw auto auto auto;
 }
-.topcontent{
-    color: white;
-    text-align: center;
-    margin: 10vw auto auto auto;
-}@media screen and (min-width:700px){
-.topcontent{
+.top-container h1 {
+  font-size: 5rem;
+  font-family: "Caveat", cursive;
+}
+@media screen and (min-width: 768px) {
+  .top-container {
     color: white;
     text-align: center;
     margin: 30vh auto auto auto;
-}
-}
-.topcontent h2{
-    font-size: 4rem;
-    font-family: 'Caveat', cursive;
-}@media screen and (min-width:600px){
-.topcontent h2{
-    font-size: 8rem;
-    font-family: 'Caveat', cursive;
-}
-}
-.profile {
-    text-align: center;
-    margin: 80px 0;
-}
-.profile h2 {
     font-size: 2.5rem;
-    padding: 20px 0;
-}@media screen and (min-width:600px){
-.profile h2{
+  }
+}
+
+.profile {
+  text-align: center;
+  margin: 80px 0;
+}
+.profile h1 {
+  font-size: 2.5rem;
+  padding: 20px 0;
+}
+@media screen and (min-width: 768px) {
+  .profile h1 {
     font-size: 5rem;
-}}
-@media screen and (min-width:700px){
-.maincontents {
+  }
+}
+
+.main-container {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .main-container {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10%;
-}}
-.maincontents a {
-    color: brown;
+  }
 }
-.maincontents a:hover {
-    color: rgb(198, 149, 130)
+.main-container a {
+  color: brown;
 }
-.link{
-    display: grid;
-    gap: 40px;
-    grid-template-columns: 150px auto 150px;
-    grid-template-rows: 150px 150px 150px;
+.main-container a:hover {
+  color: rgb(198, 149, 130);
 }
-.item-picture img{
-    width: 150px;
-    height: auto;
+
+.link {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 150px auto;
+  grid-template-rows: 150px auto;
 }
-.vivaldi{
-    padding: 56px 0;
+.link p {
+  margin: 50px 0;
 }
-.item-big {
-    grid-column: 2 / 4;
-    margin: 50px 0;
+.link img {
+  width: 150px;
+  height: auto;
 }
+.link #vertical-center-img {
+  display: flex;
+  align-items: center;
+}
+
 footer {
-    color: white;
-    background-image: url(images/teatime_footer.jpg);
+  color: white;
+  background-image: url(images/teatime_footer.jpg);
 }
+footer small {
+  margin-left: 10%;
+}/*# sourceMappingURL=style.css.map */
