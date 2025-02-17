@@ -8,24 +8,32 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="icon" href="images/teapot-icon.png" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Shippori+Mincho&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!--ヘッダー-->
         <header class="header">
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item-li"><a href="#" class="header__item-link">About</a></li>
-                    <li class="header__item-li"><a href="#" class="header__item-link">Skills</a></li>
-                    <li class="header__item-li"><a href="#" class="header__item-link">Links</a></li>
+                    <li class="header__item-li"><a href="#about-title" class="header__item-link">About</a></li>
+                    <li class="header__item-li"><a href="#skills-top" class="header__item-link">Skills</a></li>
+                    <li class="header__item-li"><a href="#links-title" class="header__item-link">Links</a></li>
                 </ul>
             </nav>
         </header>
 
         <!--トップ-->
-        <p class="top__body">Yunima</p>
+        <div class="top__wrapper">
+            <div class="top__container">
+                <p class="top__body"><span class="top__calactor-big">Y</span>unima</p>
+            </div>
+        </div>
         
         <!--概要-->
         <div class="about__container">
-            <h1 class="about__item-title">yunima</h1>
+            <h1 class="about__item-title" id="about-title">yunima</h1>
             <ul class="about__list">
                 <li class="about__item-li">X-gender</li>
                 <li class="about__item-li">1998.7.9 生まれ</li>
@@ -38,37 +46,45 @@
         </div>
 
         <!--スキル-->
-        <h1 class="skills__item-title">Skills</h1>
-        <div class="skills__container">
-            <ul class="skills__list skills__list__col-left">
-                <li class="skills__item-li"><img src="#" alt="HTML5" class="skills__item-link"></li>
-                <li class="skills__item-li"><img src="#" alt="Kotlin" class="skills__item-link"></li>
-            </ul>
-            <ul class="skills__list skills__list__col-left">
-                <li class="skills__item-li">
-                    <ul class="skills__list skills__row-upper">
-                        <li class="skills__item-li"><img src="#" alt="CSS" class="skills__item-link"></li>
-                        <li class="skills__item-li"><img src="#" alt="JavaScript" class="skills__item-link"></li>
-                        <li class="skills__item-li"><img src="#" alt="jQuery" class="skills__item-link"></li>
-                    </ul>
-                </li>
-                <li class="skills__item-li">
-                    <ul class="skills__list skills__row-middle">
-                        <li class="skills__item-li"><img src="#" alt="Jetpack Compose" class="skills__item-link"></li>
-                        <li class="skills__item-li"><img src="#" alt="Android Studio" class="skills__item-link"></li>
-                    </ul>
-                </li>
-                <li class="skills__item-li">
-                    <ul class="skills__list skills__row-lower">
-                        <li class="skils__item-li"><img src="#" alt="VS Code" class="skills__item-link"></li>
-                        <li class="skils__item-li"><img src="#" alt="Github" class="skills__item-link"></li>
-                    </ul>
-                </li>
-            </ul>
+        <div class="skills__wrapper" id="skills-top">         
+            <div class="skills__list__container">
+                <ul class="skills__list skills__col-ul">
+                    <li class="skills__col skills__col-li-left">
+                        <ul class="skills__list skills__list__col skills__list__col-left">
+                            <li class="skills__item-li"><img src="images/html5-logo.png" alt="HTML5" class="skills__item-link"></li>
+                            <li class="skills__item-li"><img src="images/Kotlin Full Color Logo Mark RGB.png" alt="Kotlin" class="skills__item-link"></li>
+                        </ul>
+                    </li>
+                    <li class="skills__col skills__col-li-right">
+                        <ul class="skills__list skills__list__col skills__list__col-right">
+                            <li class="skills__list__row-li">
+                                <ul class="skills__list skills__list__row skills__list__row-upper">
+                                    <li class="skills__item-li"><img src="images/css.png" alt="CSS" class="skills__item-link"></li>
+                                    <li class="skills__item-li"><img src="images/js.png" alt="JavaScript" class="skills__item-link"></li>
+                                    <li class="skills__item-li"><img src="images/jquery.png" alt="jQuery" class="skills__item-link"></li>
+                                </ul>
+                            </li>
+                            <li class="skills__list__row-li">
+                                <ul class="skills__list skills__list__row skills__list__row-middle">
+                                    <li class="skills__item-li"><img src="images/jetpack compose icon_RGB.png" alt="Jetpack Compose" class="skills__item-link"></li>
+                                    <li class="skills__item-li"><img src="images/Android_Studio_icon_(2023).png" alt="Android Studio" class="skills__item-link"></li>
+                                </ul>
+                            </li>
+                            <li class="skills__list__row-li">
+                                <ul class="skills__list skills__list__row skills__list__row-lower">
+                                    <li class="skills__item-li"><img src="images/vscode.png" alt="VS Code" class="skills__item-link"></li>
+                                    <li class="skills__item-li"><img src="images/github-mark.png" alt="Github" class="skills__item-link"></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <h1 class="skills__item-title"><span class="skills__calactor-big">S</span>kills</h1>
         </div>
 
         <!--リンク-->
-        <h1 class="links__title">Links</h1>
+        <h1 class="links__title" id="links-title"><span class="links__calactor-big">L</span>inks</h1>
         <div class="links__container">
             <ul class="links__list">
                 <li class="links__item-li"><a href="https://misskey.dev/@yunima" class="links__item-link">misskey.dev</a></li>
