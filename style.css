@@ -1,5 +1,6 @@
 html, body {
-  height: 100%; }
+  height: 100%;
+  min-height: 100vh; }
 
 body {
   line-height: 1.7;
@@ -66,8 +67,8 @@ a {
     display: flex;
     align-items: flex-end;
     margin-top: auto;
-    bottom: 0;
-    margin-left: 20px; }
+    margin-left: 20px;
+    bottom: env(safe-area-inset-bottom, 10px); }
     .top__wrapper .top__container .top__body {
       font-size: 90px;
       line-height: 1.2; }
