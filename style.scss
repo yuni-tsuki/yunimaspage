@@ -1,6 +1,7 @@
 @charset "UTF-8";
 $pc_width: 768px;
-@mixin mb {
+
+@mixin mb{
     @media screen and (max-width:$pc_width){
         @content;
     }
@@ -14,10 +15,7 @@ body {
     font-size: 16px;
     min-width: 100%;
     color: white;
-    background-image: url(images/yunimaspage-2024-bg.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+    background: transparent;
     font-family: "Libre Baskerville", "Shippori Mincho", serif;
 }
 img {
@@ -33,8 +31,20 @@ a {
         color: white;
     }
 }
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/yunimaspage-2024-bg.jpg) center center / cover no-repeat;
+    z-index: -1;
+  }
 .header {
     font-size: 20px;
+    @include mb {
+        font-size: 16px;
+    }
     padding-top: 10px;
     position: relative;
     z-index: 1000;
@@ -46,6 +56,9 @@ a {
             list-style: none;
             .header__item-li {
                 padding-right: 30px;
+                @include mb {
+                    padding-right: 20px;
+                }
                 .header__item-link {
                     text-decoration: none;
                     transition: 0.3s;
@@ -74,9 +87,15 @@ a {
         margin-left: 20px;
         .top__body {
             font-size: 90px;
+            @include mb {
+                font-size: 10vw;
+            }
             line-height: 1.2;
             .top__calactor-big {
                 font-size: 150px;
+                @include mb {
+                    font-size: 18vw;
+                }
             }
         }
     }
@@ -95,6 +114,10 @@ a {
         font-size: 20px;
         margin-bottom: 30px;
         list-style: none;
+        @include mb {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
         .about__item-li {
             padding-bottom: 10px;
         }
@@ -102,8 +125,7 @@ a {
 }
 
 .skills__wrapper {
-    height: 80vh;
-    top: -60px;
+    min-height: 48vw;
     display: flex;
     flex-direction: column;
     bottom: 0;
@@ -113,6 +135,7 @@ a {
 .skills__item-title {
     display: flex;
     align-items: flex-end;
+    padding-right: 10px;
     justify-content: right;
     margin-top: auto;
     bottom: 0;
@@ -120,13 +143,8 @@ a {
     font-size: 70px;
 }
 .skills__list__container {
-    //display: flex;
-    //flex-direction: row;
     .skills__col-ul {
-        //column-count: 2;
         display: flex;
-        //flex: 1;
-        padding: 20px;
         list-style: none;
         .skills__item-li {
             break-inside: avoid;
@@ -136,15 +154,14 @@ a {
         list-style: none;
     }
     .skills__col-li-left {
-        //column-width: 30vw;
+        padding-left: 5vw;
         flex: 1;
     }
     .skills__list__col-left {
-        //width: 30vw;
         .skills__item-li {
             width: 20vw;
             height: 20vw;
-            margin-bottom: 20px;
+            margin-bottom: 5vw;
             .skills__item-link {
                 width: 18vw;
                 height: 18vw;
@@ -155,24 +172,22 @@ a {
         flex: 3;
     }
     .skills__list__col-right {
-        //width: 70vw;
-        //flex: 2;
         display: flex;
         flex-direction: column;
         .skills__list__row {
             display: flex;
-            padding-bottom: 20px;
+            padding-bottom: 3vw;
             .skills__item-li {
-                margin-right: 20px;
+                margin-right: 3vw;
             }
         }
         .skills__list__row-upper {
             .skills__item-li {
-                width: 15vw;
-                height: 15vw;
+                width: 16vw;
+                height: 16vw;
                 .skills__item-link{
-                    width: 13vw;
-                    height: 13vw;
+                    width: 14vw;
+                    height: 14vw;
                 }
             }
         }
@@ -214,6 +229,13 @@ a {
     .links__calactor-big {
         font-size: 120px;
     }
+    @include mb {
+        font-size: 50px;
+        .links__calactor-big {
+            font-size: 70px;
+        }
+    }
+    
 }
 .links__container {
     text-align: center;
