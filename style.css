@@ -106,18 +106,30 @@ a {
   flex-direction: column;
   bottom: 0;
   width: 100%;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  position: relative; }
 
-.skills__item-title {
+.skills__list__container .skills__title__container {
+  position: absolute;
   display: flex;
   align-items: flex-end;
-  padding-right: 10px;
-  justify-content: right;
   margin-top: auto;
-  bottom: 0;
   margin-left: 20px;
-  font-size: 70px; }
-
+  bottom: 0;
+  right: 0;
+  z-index: 1; }
+  .skills__list__container .skills__title__container .skills__item-title {
+    display: flex;
+    align-items: flex-end;
+    padding-right: 10px;
+    justify-content: right;
+    margin-top: auto;
+    bottom: 0;
+    margin-left: 20px;
+    font-size: 70px; }
+    @media screen and (max-width: 768px) {
+      .skills__list__container .skills__title__container .skills__item-title {
+        font-size: 10vw; } }
 .skills__list__container .skills__col-ul {
   display: flex;
   list-style: none; }
@@ -190,8 +202,7 @@ a {
     padding-bottom: 20px; }
 
 .footer {
-  color: white;
-  background-image: url(images/teatime_footer.jpg); }
+  color: white; }
   .footer .footer__item-copyright {
     text-align: center; }
 

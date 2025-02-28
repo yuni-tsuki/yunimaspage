@@ -132,18 +132,34 @@ a {
     bottom: 0;
     width: 100%;
     margin-bottom: 100px;
-}
-.skills__item-title {
-    display: flex;
-    align-items: flex-end;
-    padding-right: 10px;
-    justify-content: right;
-    margin-top: auto;
-    bottom: 0;
-    margin-left: 20px;
-    font-size: 70px;
+    position: relative;
+    //top: -60px;
 }
 .skills__list__container {
+    .skills__title__container {
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        margin-top: auto;
+        margin-left: 20px;
+        //bottom: env(safe-area-inset-bottom, 10px);
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        .skills__item-title {
+            display: flex;
+            align-items: flex-end;
+            padding-right: 10px;
+            justify-content: right;
+            margin-top: auto;
+            bottom: 0;
+            margin-left: 20px;
+            font-size: 70px;
+            @include mb {
+                font-size: 10vw;
+            }
+        }
+    }
     .skills__col-ul {
         display: flex;
         list-style: none;
@@ -251,7 +267,6 @@ a {
 
 .footer {
     color: white;
-    background-image: url(images/teatime_footer.jpg);
     .footer__item-copyright {
         text-align: center;
     }
