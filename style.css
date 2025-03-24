@@ -20,6 +20,9 @@ a {
     opacity: 0.8; }
   a:visited {
     color: white; }
+  a:focus {
+    outline: 2px solid white;
+    outline-offset: 3px; }
 
 .bg {
   position: fixed;
