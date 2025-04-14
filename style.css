@@ -79,7 +79,8 @@ a {
         .top__wrapper .top__container .top__body {
           font-size: 10vw; } }
       .top__wrapper .top__container .top__body .top__calactor-big {
-        font-size: 150px; }
+        font-size: 150px;
+        letter-spacing: -25px; }
         @media screen and (max-width: 768px) {
           .top__wrapper .top__container .top__body .top__calactor-big {
             font-size: 18vw; } }

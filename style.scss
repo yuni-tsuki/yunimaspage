@@ -98,6 +98,7 @@ a {
             line-height: 1.2;
             .top__calactor-big {
                 font-size: 150px;
+                letter-spacing: -25px;
                 @include mb {
                     font-size: 18vw;
                 }
