@@ -83,7 +83,8 @@ a {
         letter-spacing: -25px; }
         @media screen and (max-width: 768px) {
           .top__wrapper .top__container .top__body .top__calactor-big {
-            font-size: 18vw; } }
+            font-size: 18vw;
+            letter-spacing: -3vw; } }
 
 .about__container {
   text-align: center;

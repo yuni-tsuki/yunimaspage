@@ -101,6 +101,7 @@ a {
                 letter-spacing: -25px;
                 @include mb {
                     font-size: 18vw;
+                    letter-spacing: -3vw;
                 }
             }
         }
