@@ -66,6 +66,9 @@ a {
   flex-direction: column;
   bottom: 0;
   width: 100%; }
+  @media screen and (max-width: 768px) {
+    .top__wrapper {
+      height: 100dvh; } }
   .top__wrapper .top__container {
     display: flex;
     align-items: flex-end;

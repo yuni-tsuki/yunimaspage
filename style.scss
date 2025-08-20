@@ -78,6 +78,9 @@ a {
 
 .top__wrapper {
     height: 100vh;
+    @include mb {
+        height: 100dvh;
+    }
     position: relative;
     top: -60px;
     display: flex;
